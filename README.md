@@ -148,7 +148,7 @@ import java.sql.Array;
 public class Main {
     public static void main(String[] args) {
 
-       String[] myArray = new String[3];
+       String[] myArray = new String[3];     // max. 3 Inhalte erlaubt
 
        myArray[0] = "AAA";
        myArray[1] = "BBB";
@@ -177,4 +177,43 @@ public class Main {
 *********************************************************************************
 // Foreach Schleife: 
 
+public class Main {
+    public static void main(String[] args) {
+
+       String[] myArray = {"AAA", "BBB", "CCC"};
+
+       for (String inhalt : myArray) {          //durchlaufe in Array "myArray" und speichere die Inhalte in Typ "inhalt"
+           System.out.println(inhalt);
+       }
+    }
+}
+
+*****************************************************************************************
+// Mehrdimensionale Arrays : ***********************************************************
+
+public class Main {
+    public static void main(String[] args) {
+
+       String[][] Lagerplatz = new String[3][2];   //3 va 2 lar 1 dan boshlab hisoblanadi 
+
+        Lagerplatz[0][0] = "A1";
+        Lagerplatz[0][1] = "A2";
+
+        Lagerplatz[1][0] = "B1";
+        Lagerplatz[1][1] = "B2";
+
+        Lagerplatz[2][0] = "C1";
+        Lagerplatz[2][1] = "C2";
+
+       for (int i = 0; i < Lagerplatz.length; i++) {
+           for (int j = 0; j < Lagerplatz[i].length; j++) {
+            System.out.print(Lagerplatz[i][j] + " ");
+           }
+           System.out.println();
+       }
+    }
+}
+
+***************************************************************************************************
+// Methoden: *************************************************************************************
 
