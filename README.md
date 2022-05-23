@@ -217,3 +217,57 @@ public class Main {
 ***************************************************************************************************
 // Methoden: *************************************************************************************
 
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Hiert kommt ein Method:");
+
+        myMethod();
+    }
+    public static void myMethod() {        // void bedeutet kein Rückgabewert 
+        int a = 5;
+        int b = 10;
+        System.out.println(a + b);
+    }
+}
+
+****************************************************************************************************
+// Methode mit Pareameter **************************************************************************
+
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Hiert kommt ein Method:");
+
+        myMethod(2, 5);
+    }
+    public static void myMethod(int parameter1, int parameter2) {
+        int a = parameter1;
+        int b = parameter2;
+        System.out.println(a + b);
+    }
+}
+
+********************************************************************************************************
+// Methode mit Rückgabewert ****************************************************************************
+
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Hiert kommt ein Method:");
+
+        myMethod(2, 5);     //Ergebnis der Methode ist hier gespeichert, zeigt aber nicht
+        System.out.println(myMethod(2, 5));    
+    }
+    public static int myMethod(int parameter1, int parameter2) {
+        int a = parameter1 + parameter2;
+        return a;
+    }
+}
+
+***********************************************************************************************************
+// Objekt Orientierte Programmierung(OOP)
+// Klasse - Bauplan für Objekte 
+// Attribute - Eigenschaften der Objekte 
+// Methoden -  Funktionen der Objekte 
+
