@@ -356,6 +356,8 @@ public class Katze {
 13. Konstruktor:
 
 // Konstruktor dient die Attribute einfach zu initialisieren.
+
+
 public class Main {
     public static void main(String[] args) {
 
