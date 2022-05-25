@@ -270,4 +270,118 @@ public class Main {
     // Klasse - Bauplan für Objekte 
     // Attribute - Eigenschaften der Objekte 
     // Methoden -  Funktionen der Objekte 
+    
+    
+   //Hier ist Main Klasse: 
+    
+    public class Main {
+    public static void main(String[] args) {
+
+        Katze katzeObjekt = new Katze();
+
+        katzeObjekt.miau();
+
+        katzeObjekt.rechnen(10, 8);
+
+    }
+
+}
+
+// Hier ist die Klasse Katze: 
+
+public class Katze {
+
+    //Attribute:
+    int alter;
+    String farbe;
+    String rasse;
+    boolean springen;
+
+    //Methoden:
+    public void miau() {
+        System.out.println("Miauuuuu!!!");
+    }
+
+    public void rechnen(int zahl1, int zahl2) {
+        System.out.println(zahl1 + zahl2);
+    }
+
+}
+
+***************************************************************************************************************
+12. Parameter übergeben:
+
+// Main Klass (Hauptklasse): ------------------------------------------------------------------
+public class Main {
+    public static void main(String[] args) {
+        
+        //Attribute werden initialisiert: 
+        Katze katzeObjekt = new Katze();
+        katzeObjekt.alter = 3;
+        katzeObjekt.farbe = "gelb";
+        katzeObjekt.rasse = "heimisch";
+        katzeObjekt.springen = true;
+
+        katzeObjekt.test(true, "Miiiiiia!!!");
+
+
+    }
+
+}
+
+// Klasse Katze: ----------------------------------------------------------------------------------------
+
+public class Katze {
+
+    //Attribute:
+    int alter;
+    String farbe;
+    String rasse;
+    boolean springen;
+
+    //Methoden:
+    public void miau(String machMiau) {     // miau Methode hat Parameter machMiau, hier übernimmt das Parameter machMiau den Parameter_2
+        System.out.println(machMiau);
+    }
+
+    public void test(boolean Parameter_1, String Parameter_2) {      // test Methode hat 2 Parametern.
+        if (Parameter_1) {                      //wenn Parameter_1 true ist, dann führe das Method miau.
+            miau(Parameter_2);                  //miau übernimmt das Parameter_2.
+        }
+    }
+
+}
+
+********************************************************************************************************************************************
+13. Konstruktor:
+
+// Konstruktor dient die Attribute einfach zu initialisieren.
+public class Main {
+    public static void main(String[] args) {
+
+        Katze katzeObjekt = new Katze(2, "gelb", "heimisch", true);
+        System.out.println("katzeObjekt ist " + katzeObjekt.alter + " jahre alt");
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------------------
+public class Katze {
+
+    //Attribute:
+    int alter;
+    String farbe;
+    String rasse;
+    boolean springen;
+
+    //Konstruktor:
+    public Katze(int alter, String farbe, String rasse, boolean springen) {     //hier sind die Parametern mit gleichen Namen wie Attribute
+        this.alter = alter;   //this bedeutet Attribute alter. Also Attribut this.alter übernimmt den Parameter alter.
+        this.farbe = farbe;
+        this.rasse = rasse;
+        this.springen = springen;
+    }
+}
+    
+    
+
 
