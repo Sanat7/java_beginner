@@ -1,9 +1,9 @@
 # java_beginner 
 
 **************************************************************************************************
-// While Schleife 
+1. While Schleife 
 
-// 1. Möglichkeit:
+// Möglichkeit I:
 
 public class Main {
     public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class Main {
  }
 
 
-// 2. Möglichkeit:
+// Möglichkeit II:
 
 public class Main {
     public static void main(String[] args) {
@@ -35,7 +35,7 @@ public class Main {
 }
 
 
-// 3. Möglichkeit: 
+// Möglichkeit III: 
 
 public class Main {
     public static void main(String[] args) {
@@ -52,7 +52,7 @@ public class Main {
 }
 
 
-// 4. Möglichkeit:
+// Möglichkeit IV:
 
 import java.util.Scanner;
 
@@ -71,7 +71,7 @@ public class Main {
 }
 
 ***********************************************************************************************************
-// For Schleife 
+2. For Schleife 
 
 public class Main {
     public static void main(String[] args) {
@@ -128,7 +128,7 @@ public class Main {
 }
 
 ************************************************************************************************************
-// Random Klasse 
+3. Random Klasse 
 
 import java.util.Random;
 
@@ -141,7 +141,7 @@ public class Main {
 }
 
 *******************************************************************************************************************
-// Array:
+4. Array:
 
 import java.sql.Array;
 
@@ -161,7 +161,7 @@ public class Main {
 }
 
 ******************************************************************************************
-// Array Möglichkeit 2: 
+5. Array Möglichkeit 2: 
 
 public class Main {
     public static void main(String[] args) {
@@ -175,7 +175,7 @@ public class Main {
 }
 
 *********************************************************************************
-// Foreach Schleife: 
+6. Foreach Schleife: 
 
 public class Main {
     public static void main(String[] args) {
@@ -189,7 +189,7 @@ public class Main {
 }
 
 *****************************************************************************************
-// Mehrdimensionale Arrays : ***********************************************************
+7. Mehrdimensionale Arrays : ***********************************************************
 
 public class Main {
     public static void main(String[] args) {
@@ -215,7 +215,7 @@ public class Main {
 }
 
 ***************************************************************************************************
-// Methoden: *************************************************************************************
+8. Methoden: *************************************************************************************
 
 public class Main {
     public static void main(String[] args) {
@@ -232,7 +232,7 @@ public class Main {
 }
 
 ****************************************************************************************************
-// Methode mit Pareameter **************************************************************************
+9. Methode mit Pareameter **************************************************************************
 
 public class Main {
     public static void main(String[] args) {
@@ -249,7 +249,7 @@ public class Main {
 }
 
 ********************************************************************************************************
-// Methode mit Rückgabewert ****************************************************************************
+10. Methode mit Rückgabewert ****************************************************************************
 
 public class Main {
     public static void main(String[] args) {
@@ -266,8 +266,8 @@ public class Main {
 }
 
 ***********************************************************************************************************
-// Objekt Orientierte Programmierung(OOP)
-// Klasse - Bauplan für Objekte 
-// Attribute - Eigenschaften der Objekte 
-// Methoden -  Funktionen der Objekte 
+11.  Objekt Orientierte Programmierung(OOP)
+    // Klasse - Bauplan für Objekte 
+    // Attribute - Eigenschaften der Objekte 
+    // Methoden -  Funktionen der Objekte 
 
