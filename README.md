@@ -383,7 +383,62 @@ public class Katze {
         this.springen = springen;
     }
 }
+
+****************************************************************************************************************************
+// Konstruktor.
+
+public class Main {
+    public static void main(String[] args) {
+
+        Katze katzeObjekt = new Katze(2, "gelb", "heimisch", true);
+        System.out.println("katzeObjekt ist " + katzeObjekt.alter + " jahre alt.");
+
+        Katze mashka = new Katze(0.2, "schwarz", "unbekannt", true);
+        System.out.print("Mashka ist " + mashka.alter + " Jahre alt, " + mashka.farbe + ", Rasse ist " + mashka.rasse + ", und kann ");
+        if (mashka.springen) {
+            System.out.print("springen.");
+        } else {
+            System.out.print("nicht springen, weil er noch jung ist.");
+        }
+    }
+}
+
+----------------------------------------------------------------------------------------------------------
+
+public class Katze {
+
+    //Attribute:
+    double alter;
+    String farbe;
+    String rasse;
+    boolean springen;
     
+    //Konstruktor:
+    public Katze(double alter, String farbe, String rasse, boolean springen) {     //hier sind die Parametern mit gleichen Namen wie Attribute
+        this.alter = alter;   //this bedeutet Attribute alter. Also Attribut this.alter übernimmt den Parameter alter.
+        this.farbe = farbe;
+        this.rasse = rasse;
+        this.springen = springen;
+    }
+}
+
+
+***********************************************************************************************************************
+14. Rückgabewert.
+
+public class Main {
+    public static void main(String[] args) {        //void bedeutet, dass diese Methode kein Rückgabewert gibt. 
+        int summe = addition(5, 10);
+        System.out.println(summe);
+    }
+
+    public static int addition(int zahl1, int zahl2) {     //ohne void gibt Methode einen Rückgabewert.
+        return zahl1 + zahl2;
+    }
+}
+
+
+
     
 
 
