@@ -429,15 +429,57 @@ public class Katze {
 
 public class Main {
 
-    public static void main(String[] args) {        //void bedeutet, dass diese Methode kein Rückgabewert gibt. 
+    public static void main(String[] args) {        //void bedeutet, dass diese Methode kein Rückgabewert zurückgibt. 
         int summe = addition(5, 10);
         System.out.println(summe);
     }
 
-    public static int addition(int zahl1, int zahl2) {     //ohne void gibt Methode einen Rückgabewert.
+    public static int addition(int zahl1, int zahl2) {     //ohne void gibt Methode einen Rückgabewert zurück.
         return zahl1 + zahl2;
     }
 }
+
+
+
+Rückgabewert -------------------------------------------------------------------------------------------------------------
+
+
+public class Main {
+    public static void main(String[] args) {
+        Katze katze1 = fremdKatze(1);
+    }
+
+    public static Katze fremdKatze(int alter) {
+        return new Katze(alter, "weiss", "qaymoq", true);
+    }
+}
+
+
+
+-------------------------------------------------------------------------------------------------------------
+
+
+public class Katze {
+    //Attribute:
+    double alter;
+    String farbe;
+    String rasse;
+    boolean springen;
+
+    //Konstruktor:
+    public Katze(double alter, String farbe, String rasse, boolean springen) {     //hier sind die Parametern mit gleichen Namen wie Attribute
+        this.alter = alter;   //this bedeutet Attribute alter. Also Attribut this.alter übernimmt den Parameter alter.
+        this.farbe = farbe;
+        this.rasse = rasse;
+        this.springen = springen;
+    }
+}
+
+
+**************************************************************************************************************
+15. Überladung--------------------------------------------------------------------------------
+     - mehrere Methoden mit gleicher Name, unterschiedlicher Parametern 
+
 
 
 
