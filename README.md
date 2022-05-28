@@ -481,6 +481,43 @@ public class Katze {
      - mehrere Methoden mit gleicher Name, unterschiedlicher Parametern 
 
 
+public class Main {
+    public static void main(String[] args) {
+        Kunde kunde1 = new Kunde("Xolid", "abc", 24, "Berlin");
+        Kunde kunde2 = new Kunde("Sara", "sara1234"); 
+    }
+}
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+public class Kunde {
+
+    String name;
+    String email;
+    int age;
+    String ort;
+
+    public Kunde(String name, String email, int age, String ort) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        this.ort = ort;
+    }
+
+    public Kunde(String name, String email) {
+        this.name = name;
+        this.email = email;
+        this.age = 0;
+        this.ort = "";
+    }
+}
+
+
+*************************************************************************************************************
+
+15. 
 
 
     
