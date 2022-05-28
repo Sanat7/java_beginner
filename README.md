@@ -428,6 +428,7 @@ public class Katze {
 
 
 public class Main {
+
     public static void main(String[] args) {        //void bedeutet, dass diese Methode kein Rückgabewert gibt. 
         int summe = addition(5, 10);
         System.out.println(summe);
