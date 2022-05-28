@@ -424,7 +424,8 @@ public class Katze {
 
 
 ***********************************************************************************************************************
-14. Rückgabewert.
+14. Rückgabewert--------------------------------------------------------------------------------
+
 
 public class Main {
     public static void main(String[] args) {        //void bedeutet, dass diese Methode kein Rückgabewert gibt. 
