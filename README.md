@@ -518,7 +518,81 @@ public class Kunde {
 
 *************************************************************************************************************
 
-15. 
+15. Public = offentlich, Private = nicht offentlich
+
+
+public class Main {
+    public static void main(String[] args) {
+       Kunde kunde1 = new Kunde("Xolid", "abc", 24, "Berlin");
+       kunde1.muster();
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------
+
+
+public class Kunde {
+
+    String name;
+    String email;
+    private int ageDiskret;     //wenn man hier private eingibt, wird es in andere Klasse nicht veröffentlicht 
+    String ort;
+
+    public Kunde(String name, String email, int ageDiskret, String ort) {
+        this.name = name;
+        this.email = email;
+        this.ageDiskret = ageDiskret;
+        this.ort = ort;
+    }
+
+    public void muster() {
+        System.out.println("Halloooooo");
+    }
+}
+
+
+**************************************************************************************************************************
+16. Getter
+
+
+public class Main {
+    public static void main(String[] args) {
+       Kunde kunde1 = new Kunde("Xolid", "abc", 24, "Berlin");
+       System.out.println(kunde1.getAge());     //oldiga get desa ham boladi
+       System.out.println(kunde1.shuOrt());     //oldiga get qoymasa, umuman boshqacha nomlasa boladi
+    }
+}
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+public class Kunde {
+
+    private String name;
+    private String email;
+    private int age;
+    private String ort;
+
+    public Kunde(String name, String email, int age, String ort) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        this.ort = ort;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public String shuOrt() {
+        return ort;
+    }
+}
+
+
+***********************************************************************************************************************
+17. Setter 
 
 
     
