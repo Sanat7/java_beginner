@@ -595,6 +595,107 @@ public class Kunde {
 17. Setter 
 
 
+public class Main {
+    public static void main(String[] args) {
+       Kunde kunde1 = new Kunde("Xolid", "abc", 24, "Berlin");
+       kunde1.setAge(25);       //set bu yerda yoshini o'zgartiradi 
+       System.out.println(kunde1.getAge());
+
+    }
+}
     
+   
+-----------------------------------------------------------------------------------------------------------
+
+
+public class Kunde {
+
+    private String name;
+    private String email;
+    private int age;
+    private String ort;
+    //Konstruktor
+    public Kunde(String name, String email, int age, String ort) {
+        this.name = name;
+        this.email = email;
+        this.age = age;
+        this.ort = ort;
+    }
+    public void setAge(int newAge) {
+        this.age = newAge;
+    }
+    public int getAge() {
+        return age;
+    }
+}
+
+
+**************************************************************************************************************
+
+18. Static = bedeutet Objektunabhängigkeit. Sie sind unabhängig von Objekten füreinander offentlich. 
+
+
+public class Main {
+   static String gruß = "Hallooooo!";           
+
+    public static void main(String[] args) {
+        Kunde.bestellen();          //wegen static ist hier offentlich 
+     System.out.println(gruß);      //wegen static ist hier offentlich 
+
+    }
+}
+
+
+----------------------------------------------------------------------------------------------------------
+
+
+public class Kunde {
+
+    private int age = 32;
+    private String ort = "Stuttgart";
+
+    public static void bestellen() {
+        System.out.println("bestellt.");
+    }
+}
+
+
+*******************************************************************************************
+
+19. Vererbung.
+
+public class Main {
+    
+    public static void main(String[] args) {
+
+        Motorrad motorrad1 = new Motorrad();
+        motorrad1.fahren();
+        System.out.println(motorrad1.preis);
+    }
+}
+
+
+------------------------------------------------------------------------------------------------
+
+public class Fahrrad {
+    int preis = 500;
+
+    public void fahren() {
+        System.out.println("Fahrrad faehrt...");
+    }
+}
+
+------------------------------------------------------------------------------------------
+
+public class Motorrad extends Fahrrad{   //erbt von Fahrrad
+
+}
+
+
+*********************************************************************************************************************
+
+20. 
+
+
 
 
