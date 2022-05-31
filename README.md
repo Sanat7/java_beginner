@@ -694,8 +694,47 @@ public class Motorrad extends Fahrrad{   //erbt von Fahrrad
 
 *********************************************************************************************************************
 
-20. 
+20. Konstruktoren für Fortgeschrittene.
 
 
+public class Main {
+
+    public static void main(String[] args) {
+    
+        //so viele Parametern mussen sein, wie in der Konstruktion
+        
+        Fahrrad bike1 = new Fahrrad(22, "hec", 15, true);
+        Fahrrad bike2 = new Fahrrad(44,"ndn");
+        Fahrrad bike3 = new Fahrrad();
+    }
+}
+    
+    --------------------------------------------------------------------------------------------------------------------
+    
+    
+public class Fahrrad {
+    int preis;
+    String marke;
+    int grosse;
+    boolean elektrish;
+
+    public Fahrrad(int preis, String marke, int grosse, boolean elektrish) {    //4 Parameter
+        this.preis = preis;
+        this.marke = marke;
+        this.grosse = grosse;
+        this.elektrish = elektrish;
+    }
+
+    public Fahrrad(int preis, String marke) {     //2 Parameter
+        this.preis = preis;
+        this.marke = marke;
+    }
+
+    public Fahrrad() {        // keine Parameter, leere Konstruktor
+    }
+}
 
 
+***********************************************************************************************************************
+
+21. 
