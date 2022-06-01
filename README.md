@@ -725,7 +725,7 @@ public class Fahrrad {
         this.elektrish = elektrish;
     }
 
-    public Fahrrad(int preis, String marke) {     //2 Parameter
+    public Fahrrad(int preis, String marke) {     //2 Argumenten 
         this.preis = preis;
         this.marke = marke;
     }
@@ -736,5 +736,178 @@ public class Fahrrad {
 
 
 ***********************************************************************************************************************
+21. Konstruktor für Fortgeschrittene.
 
 
+public class Main {
+
+    public static void main(String[] args) {
+        
+        Fahrrad bike1 = new Fahrrad(700, "Baliq", "grau", "Sara");      //aus Konstruktor mit vollständigen Argumenten 
+        Fahrrad bike2 = new Fahrrad(1500, "Hava");                      //aus Konstruktor mit 2 Argumenten
+    }
+}
+
+----------------------------------------------------------------------------------------------------------------------------
+
+public class Fahrrad {
+    int preis;
+    String marke;
+    String farbe;
+    String nameBesitzer;
+
+    //Konstruktor mit vollständigen Argumenten.
+    public Fahrrad(int preis, String marke, String farbe, String nameBesitzer) {
+        this.preis = preis;
+        this.marke = marke;
+        this.farbe = farbe;
+        this.nameBesitzer = nameBesitzer;
+    }
+    //Neue Konstruktor mit 2 Argumenten.
+    public Fahrrad(int preis, String marke) {
+        this.preis = preis;
+        this.marke = marke;
+        this.farbe = "";        //wenn das Attribut leer steht, wird es nicht berücksichtigt
+        this.nameBesitzer = "";
+        System.out.println("jajajaja");
+    }
+}
+
+
+***************************************************************************************************************
+22. Konstruktor mit super(). 
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        //Pflanzen hat von der Lebewesen geerbt. 
+       Pflanzen pflanzen = new Pflanzen(44, 3.4, false);
+        System.out.println(pflanzen.alter);
+    }
+}
+
+-----------------------------------------------------------------------------------------------------------------
+
+public class Lebewesen {
+    int alter;
+    double größe;
+
+    public Lebewesen(int alter, double größe) {
+        this.alter = alter;
+        this.größe = größe;
+        System.out.println("Lebewesen Konstruktor ...");
+    }
+
+}
+
+---------------------------------------------------------------------------------------------------------------
+
+public class Pflanzen extends Lebewesen {
+    boolean hatNadel;
+
+    public Pflanzen(int alter, double größe, boolean hatNadel) {
+       super(alter, größe);     //mithilfe super() übernimmt die Parametern aus der Klasse Lebewesen.
+        this.hatNadel = hatNadel;
+        System.out.println("Pflanzen Konstruktor.....");
+    }
+}
+
+******************************************************************************************************************
+
+23. Überschreibung.
+
+
+public class Main {
+
+    public static void main(String[] args) {
+       
+        Fahrrad bike1 = new Motorrad();
+        bike1.fahren();                     //Zeigt Methode aus der Motorrad 
+    }
+}
+
+******************************************************************************************************
+public class Fahrrad {
+    String marke;
+    int preis;
+    String farbe;
+
+    public void fahren() {
+        System.out.println("Fahrrad fährt...");
+    }
+}
+
+*****************************************************************************************************
+public class Motorrad extends Fahrrad{
+
+    public void fahren() {      //Methode muss gleiche Name und Parameter haben, wie der Klasse Fahrrad
+        System.out.println("Motorrad fährt...");
+    }
+}
+
+***********************************************************************************************************
+24. Überladen. überladen bedeutet das, dass wir mindestens zwei Methoden vom gleichem Namen innerhalb einer Klasse haben.
+
+
+    public class Main {
+
+    public static void main(String[] args) {
+        Student fleißig = new Student();
+
+        fleißig.lernen("Mate");     
+        fleißig.lernen("Chemie", "Statistik", "Thulb");
+    }
+}
+
+-------------------------------------------------------------------------------------------------------
+
+public class Student {
+    String Buch;
+    String Vorlesung;
+    String Bibliothek;
+
+    public void lernen(String Buch) {
+        System.out.println("im Buch lernen...");
+    }
+
+    public void lernen(String Buch, String Vorlesung, String Bibliothek) {
+        System.out.println("Alles lernen...");
+    }
+}
+
+*********************************************************************************************************
+25. Methoden Überschreiben mit super().
+
+public class Main {
+
+    public static void main(String[] args) {
+        Motorrad motorrad1 = new Motorrad();
+        motorrad1.fahren();
+
+        System.out.println(motorrad1.preis);
+    }
+    
+------------------------------------------------------------------------------------------------------------
+
+public class Fahrrad {
+    int preis = 500;
+
+    public void fahren() {
+        System.out.println("Fahrrad faehrt...");
+    }
+}
+
+---------------------------------------------------------------------------------------------------
+public class Motorrad extends Fahrrad{
+
+    int preis = 12000;
+    public void fahren() {      //Methode muss gleiche Name und Parameter haben, wie der Klasse Fahrrad
+        super.fahren();      //super übernimmt das fahren() Methode aus der Klasse Fahrrad.
+        System.out.println("Motorrad faehrt...");
+    }
+}
+
+******************************************************************************************************
+
+26. 
